@@ -18,7 +18,8 @@ namespace m2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Welcome());
+            //Report3.rdlc as Report_3
+            Application.Run(new Report6());
         }
     }
 }
