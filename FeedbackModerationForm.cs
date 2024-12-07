@@ -21,82 +21,148 @@ namespace m2
 
         private void FeedbackModerationForm_Load(object sender, EventArgs e)
         {
-
+            LoadReviews();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void LoadReviews(string reviewId = "", string customerId = "", string productId = "")
         {
+            string query = @"
+            SELECT 
+                r.ReviewID, 
+                r.Review_txt, 
+                r.Rating, 
+                r.ProductID, 
+                p.ProductName, 
+                r.CustomerID, 
+                c.CustomerName
+            FROM 
+                Review r
+            INNER JOIN 
+                Product p ON r.ProductID = p.ProductID
+            INNER JOIN 
+                Customer c ON r.CustomerID = c.CustomerID
+            WHERE 
+                (@ReviewID = '' OR r.ReviewID = @ReviewID)
+                AND (@CustomerID = '' OR r.CustomerID = @CustomerID)
+                AND (@ProductID = '' OR r.ProductID = @ProductID)";
 
-        }
-
-        private void cmbReviewStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSearchFeedback_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSearchFeedback_Click(object sender, EventArgs e)
-        {
-            string keyword = txtSearchFeedback.Text;
-            string statusFilter = cmbReviewStatus.SelectedItem?.ToString();
-
-            // Logic to filter the DataGridView based on the search criteria
-            MessageBox.Show($"Searching reviews with keyword: '{keyword}' and status: '{statusFilter}'");
-        }
-
-        private void dgvFeedbackList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnApproveReview_Click(object sender, EventArgs e)
-        {
-            if (dgvFeedbackList.SelectedRows.Count > 0)
+            try
             {
-                // Logic to approve the selected review (e.g., update database)
-                MessageBox.Show("Review approved successfully!");
+                using (SqlConnection conn = new SqlConnection("Data Source=AbsirAhmedKhan;Initial Catalog=m3;Integrated Security=True"))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        // Add parameters to the query
+                        cmd.Parameters.AddWithValue("@ReviewID", reviewId);
+                        cmd.Parameters.AddWithValue("@CustomerID", customerId);
+                        cmd.Parameters.AddWithValue("@ProductID", productId);
+
+                        SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        dataAdapter.Fill(dt);
+
+                        // Bind the data to a DataGridView (assuming dgvReviews is the name of the DataGridView)
+                        dataGridView1.DataSource = dt;
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please select a review to approve.");
-            }
-        }
-
-        private void btnFlagReview_Click(object sender, EventArgs e)
-        {
-            if (dgvFeedbackList.SelectedRows.Count > 0)
-            {
-                // Logic to flag the selected review as inappropriate
-                MessageBox.Show("Review flagged as inappropriate.");
-            }
-            else
-            {
-                MessageBox.Show("Please select a review to flag.");
+                MessageBox.Show($"An error occurred while loading reviews: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnDeleteReview_Click(object sender, EventArgs e)
-        {
-            if (dgvFeedbackList.SelectedRows.Count > 0)
-            {
-                // Logic to delete the selected review (e.g., remove from database)
-                MessageBox.Show("Review deleted successfully.");
-            }
-            else
-            {
-                MessageBox.Show("Please select a review to delete.");
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //go back
             AdminDashboard ad = new AdminDashboard();
             this.Hide();
             ad.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //delete review
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                int reviewId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ReviewID"].Value);
+                DeleteReview(reviewId);
+            }
+            else
+            {
+                MessageBox.Show("Please select a review to delete.", "Selection Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void DeleteReview(int reviewId)
+        {
+            string query = "DELETE FROM Review WHERE ReviewID = @ReviewID";
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection("Data Source=AbsirAhmedKhan;Initial Catalog=m3;Integrated Security=True"))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ReviewID", reviewId);
+
+                        // Execute the delete query
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Review deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            // Reload reviews after deletion
+                            LoadReviews();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Review not found or couldn't be deleted.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while deleting the review: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Search button click event
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string reviewId = textBox3.Text.Trim();
+            string customerId = textBox1.Text.Trim();
+            string productId = textBox2.Text.Trim();
+
+            // Call the LoadReviews function with search parameters
+            LoadReviews(reviewId, customerId, productId);
+        }
+
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //customer id 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            //product id
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            //review id
+        }
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

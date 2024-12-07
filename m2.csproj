@@ -48,6 +48,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSeller.Designer.cs">
+      <DependentUpon>AddSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddProduct.Designer.cs">
+      <DependentUpon>AdminAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUpdateProduct.Designer.cs">
+      <DependentUpon>AdminUpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerTrackShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerTrackShipping.Designer.cs">
+      <DependentUpon>CustomerTrackShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCategory.Designer.cs">
+      <DependentUpon>EditCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,7 +108,8 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="CustomerOptionChoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +178,7 @@
     <Compile Include="ReportsAndAnalyticsForm.Designer.cs">
       <DependentUpon>ReportsAndAnalyticsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seller.cs" />
     <Compile Include="SellerListings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +233,30 @@
     <Compile Include="TrackShip.Designer.cs">
       <DependentUpon>TrackShip.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateSeller.Designer.cs">
+      <DependentUpon>UpdateSeller.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserAndSellerManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +287,27 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSeller.resx">
+      <DependentUpon>AddSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAddProduct.resx">
+      <DependentUpon>AdminAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUpdateProduct.resx">
+      <DependentUpon>AdminUpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerTrackShipping.resx">
+      <DependentUpon>CustomerTrackShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCategory.resx">
+      <DependentUpon>EditCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +385,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrackShip.resx">
       <DependentUpon>TrackShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateSeller.resx">
+      <DependentUpon>UpdateSeller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserAndSellerManagementForm.resx">
       <DependentUpon>UserAndSellerManagementForm.cs</DependentUpon>

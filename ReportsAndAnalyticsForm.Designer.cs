@@ -38,9 +38,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvSalesReport = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnGenerateSalesReport = new System.Windows.Forms.Button();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
@@ -76,6 +73,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Bisque;
             this.tabPage1.Controls.Add(this.dgvSalesReport);
             this.tabPage1.Controls.Add(this.btnGenerateSalesReport);
             this.tabPage1.Controls.Add(this.dtpEndDate);
@@ -87,51 +85,27 @@
             this.tabPage1.Size = new System.Drawing.Size(918, 393);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sales Reports";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // dgvSalesReport
             // 
+            this.dgvSalesReport.BackgroundColor = System.Drawing.Color.Bisque;
             this.dgvSalesReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSalesReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dgvSalesReport.Location = new System.Drawing.Point(161, 54);
+            this.dgvSalesReport.Location = new System.Drawing.Point(139, 83);
             this.dgvSalesReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvSalesReport.Name = "dgvSalesReport";
             this.dgvSalesReport.RowHeadersWidth = 62;
             this.dgvSalesReport.RowTemplate.Height = 28;
-            this.dgvSalesReport.Size = new System.Drawing.Size(457, 246);
+            this.dgvSalesReport.Size = new System.Drawing.Size(535, 246);
             this.dgvSalesReport.TabIndex = 3;
             this.dgvSalesReport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalesReport_CellContentClick);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ProductName";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "QuantitySold";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "TotalRevenue";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
             // btnGenerateSalesReport
             // 
-            this.btnGenerateSalesReport.Location = new System.Drawing.Point(524, 14);
+            this.btnGenerateSalesReport.Location = new System.Drawing.Point(533, 14);
             this.btnGenerateSalesReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerateSalesReport.Name = "btnGenerateSalesReport";
-            this.btnGenerateSalesReport.Size = new System.Drawing.Size(132, 21);
+            this.btnGenerateSalesReport.Size = new System.Drawing.Size(149, 27);
             this.btnGenerateSalesReport.TabIndex = 2;
             this.btnGenerateSalesReport.Text = "Generate Report";
             this.btnGenerateSalesReport.UseVisualStyleBackColor = true;
@@ -157,6 +131,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Bisque;
             this.tabPage2.Controls.Add(this.chartUserActivity);
             this.tabPage2.Controls.Add(this.btnGenerateUserActivityReport);
             this.tabPage2.Controls.Add(this.cmbUserTypeFilter);
@@ -167,7 +142,6 @@
             this.tabPage2.Size = new System.Drawing.Size(918, 393);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "User Activity";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // chartUserActivity
             // 
@@ -189,10 +163,10 @@
             // 
             // btnGenerateUserActivityReport
             // 
-            this.btnGenerateUserActivityReport.Location = new System.Drawing.Point(270, 17);
+            this.btnGenerateUserActivityReport.Location = new System.Drawing.Point(270, 11);
             this.btnGenerateUserActivityReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerateUserActivityReport.Name = "btnGenerateUserActivityReport";
-            this.btnGenerateUserActivityReport.Size = new System.Drawing.Size(131, 22);
+            this.btnGenerateUserActivityReport.Size = new System.Drawing.Size(140, 30);
             this.btnGenerateUserActivityReport.TabIndex = 1;
             this.btnGenerateUserActivityReport.Text = "Generate Report";
             this.btnGenerateUserActivityReport.UseVisualStyleBackColor = true;
@@ -201,12 +175,7 @@
             // cmbUserTypeFilter
             // 
             this.cmbUserTypeFilter.FormattingEnabled = true;
-            this.cmbUserTypeFilter.Items.AddRange(new object[] {
-            "All Users",
-            "Admins",
-            "Sellers",
-            "Customers"});
-            this.cmbUserTypeFilter.Location = new System.Drawing.Point(130, 17);
+            this.cmbUserTypeFilter.Location = new System.Drawing.Point(130, 15);
             this.cmbUserTypeFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUserTypeFilter.Name = "cmbUserTypeFilter";
             this.cmbUserTypeFilter.Size = new System.Drawing.Size(108, 24);
@@ -215,6 +184,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Bisque;
             this.tabPage3.Controls.Add(this.chartPerformanceMetrics);
             this.tabPage3.Controls.Add(this.btnViewPerformanceMetric);
             this.tabPage3.Controls.Add(this.lstPerformanceMetrics);
@@ -225,7 +195,7 @@
             this.tabPage3.Size = new System.Drawing.Size(918, 393);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Platform Performance";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // chartPerformanceMetrics
             // 
@@ -241,17 +211,19 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chartPerformanceMetrics.Series.Add(series2);
-            this.chartPerformanceMetrics.Size = new System.Drawing.Size(380, 240);
+            this.chartPerformanceMetrics.Size = new System.Drawing.Size(565, 326);
             this.chartPerformanceMetrics.TabIndex = 2;
             this.chartPerformanceMetrics.Text = "chart1";
             this.chartPerformanceMetrics.Click += new System.EventHandler(this.chartPerformanceMetrics_Click);
             // 
             // btnViewPerformanceMetric
             // 
-            this.btnViewPerformanceMetric.Location = new System.Drawing.Point(72, 86);
+            this.btnViewPerformanceMetric.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewPerformanceMetric.ForeColor = System.Drawing.Color.Crimson;
+            this.btnViewPerformanceMetric.Location = new System.Drawing.Point(6, 184);
             this.btnViewPerformanceMetric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnViewPerformanceMetric.Name = "btnViewPerformanceMetric";
-            this.btnViewPerformanceMetric.Size = new System.Drawing.Size(95, 23);
+            this.btnViewPerformanceMetric.Size = new System.Drawing.Size(125, 77);
             this.btnViewPerformanceMetric.TabIndex = 1;
             this.btnViewPerformanceMetric.Text = "View Metric";
             this.btnViewPerformanceMetric.UseVisualStyleBackColor = true;
@@ -259,16 +231,18 @@
             // 
             // lstPerformanceMetrics
             // 
+            this.lstPerformanceMetrics.BackColor = System.Drawing.Color.White;
+            this.lstPerformanceMetrics.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstPerformanceMetrics.ForeColor = System.Drawing.Color.Crimson;
             this.lstPerformanceMetrics.FormattingEnabled = true;
-            this.lstPerformanceMetrics.ItemHeight = 16;
+            this.lstPerformanceMetrics.ItemHeight = 23;
             this.lstPerformanceMetrics.Items.AddRange(new object[] {
             "Active Users (Last 30 Days).",
-            "Average Page Load Time.",
             "Total Transactions."});
-            this.lstPerformanceMetrics.Location = new System.Drawing.Point(25, 30);
+            this.lstPerformanceMetrics.Location = new System.Drawing.Point(6, 67);
             this.lstPerformanceMetrics.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstPerformanceMetrics.Name = "lstPerformanceMetrics";
-            this.lstPerformanceMetrics.Size = new System.Drawing.Size(196, 52);
+            this.lstPerformanceMetrics.Size = new System.Drawing.Size(279, 96);
             this.lstPerformanceMetrics.TabIndex = 0;
             this.lstPerformanceMetrics.SelectedIndexChanged += new System.EventHandler(this.lstPerformanceMetrics_SelectedIndexChanged);
             // 
@@ -318,9 +292,6 @@
         private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Button btnGenerateSalesReport;
         private System.Windows.Forms.DataGridView dgvSalesReport;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.ComboBox cmbUserTypeFilter;
         private System.Windows.Forms.Button btnGenerateUserActivityReport;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartUserActivity;

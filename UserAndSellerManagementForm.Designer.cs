@@ -31,31 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAndSellerManagementForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSuspendUser = new System.Windows.Forms.Button();
             this.btnSearchUsers = new System.Windows.Forms.Button();
-            this.cmbFilterUsers = new System.Windows.Forms.ComboBox();
             this.Search = new System.Windows.Forms.Label();
-            this.txtSearchUsers = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AccountStatus = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnApproveSeller = new System.Windows.Forms.Button();
             this.btnSuspendSeller = new System.Windows.Forms.Button();
-            this.btnSearchSellers = new System.Windows.Forms.Button();
-            this.cmbFilterSellers = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSearchSellers = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.BusinessName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email_Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit_Seller = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete_Seller = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -67,7 +60,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 143);
+            this.tabControl1.Location = new System.Drawing.Point(12, 142);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -76,11 +69,14 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnSuspendUser);
+            this.tabPage1.BackColor = System.Drawing.Color.Bisque;
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.button5);
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.btnSearchUsers);
-            this.tabPage1.Controls.Add(this.cmbFilterUsers);
             this.tabPage1.Controls.Add(this.Search);
-            this.tabPage1.Controls.Add(this.txtSearchUsers);
+            this.tabPage1.Controls.Add(this.btnSuspendUser);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -88,128 +84,81 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Size = new System.Drawing.Size(946, 384);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "User";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Text = "Customer";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.textBox1.ForeColor = System.Drawing.Color.Crimson;
+            this.textBox1.Location = new System.Drawing.Point(318, 20);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(101, 28);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnSuspendUser
             // 
-            this.btnSuspendUser.Location = new System.Drawing.Point(761, 159);
+            this.btnSuspendUser.BackColor = System.Drawing.Color.White;
+            this.btnSuspendUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnSuspendUser.ForeColor = System.Drawing.Color.Crimson;
+            this.btnSuspendUser.Location = new System.Drawing.Point(17, 336);
             this.btnSuspendUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSuspendUser.Name = "btnSuspendUser";
-            this.btnSuspendUser.Size = new System.Drawing.Size(79, 26);
+            this.btnSuspendUser.Size = new System.Drawing.Size(103, 39);
             this.btnSuspendUser.TabIndex = 5;
-            this.btnSuspendUser.Text = "Suspend";
-            this.btnSuspendUser.UseVisualStyleBackColor = true;
+            this.btnSuspendUser.Text = "Add";
+            this.btnSuspendUser.UseVisualStyleBackColor = false;
             this.btnSuspendUser.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSearchUsers
             // 
-            this.btnSearchUsers.Location = new System.Drawing.Point(516, 21);
+            this.btnSearchUsers.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchUsers.ForeColor = System.Drawing.Color.Crimson;
+            this.btnSearchUsers.Location = new System.Drawing.Point(450, 20);
             this.btnSearchUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearchUsers.Name = "btnSearchUsers";
-            this.btnSearchUsers.Size = new System.Drawing.Size(67, 21);
+            this.btnSearchUsers.Size = new System.Drawing.Size(90, 28);
             this.btnSearchUsers.TabIndex = 4;
             this.btnSearchUsers.Text = "Search";
             this.btnSearchUsers.UseVisualStyleBackColor = true;
-            // 
-            // cmbFilterUsers
-            // 
-            this.cmbFilterUsers.Enabled = false;
-            this.cmbFilterUsers.FormattingEnabled = true;
-            this.cmbFilterUsers.Items.AddRange(new object[] {
-            "Active",
-            "Suspended",
-            "Inactive"});
-            this.cmbFilterUsers.Location = new System.Drawing.Point(391, 19);
-            this.cmbFilterUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbFilterUsers.Name = "cmbFilterUsers";
-            this.cmbFilterUsers.Size = new System.Drawing.Size(108, 24);
-            this.cmbFilterUsers.TabIndex = 3;
-            this.cmbFilterUsers.Text = "Choose";
+            this.btnSearchUsers.Click += new System.EventHandler(this.btnSearchUsers_Click);
             // 
             // Search
             // 
             this.Search.AutoSize = true;
-            this.Search.Location = new System.Drawing.Point(249, 22);
+            this.Search.BackColor = System.Drawing.Color.Transparent;
+            this.Search.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Search.ForeColor = System.Drawing.Color.Crimson;
+            this.Search.Location = new System.Drawing.Point(13, 24);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(89, 16);
+            this.Search.Size = new System.Drawing.Size(280, 19);
             this.Search.TabIndex = 2;
-            this.Search.Text = "Search Users";
-            // 
-            // txtSearchUsers
-            // 
-            this.txtSearchUsers.Location = new System.Drawing.Point(244, 19);
-            this.txtSearchUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearchUsers.Name = "txtSearchUsers";
-            this.txtSearchUsers.Size = new System.Drawing.Size(130, 22);
-            this.txtSearchUsers.TabIndex = 1;
+            this.Search.Text = "Search Customer by Customer ID";
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Bisque;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Name,
-            this.Email,
-            this.AccountStatus,
-            this.Edit,
-            this.Delete});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 56);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 69);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(726, 243);
+            this.dataGridView1.Size = new System.Drawing.Size(923, 263);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Name
-            // 
-            this.Name.HeaderText = "Name";
-            this.Name.MinimumWidth = 8;
-            this.Name.Name = "Name";
-            this.Name.Width = 150;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 8;
-            this.Email.Name = "Email";
-            this.Email.Width = 150;
-            // 
-            // AccountStatus
-            // 
-            this.AccountStatus.HeaderText = "Account Status";
-            this.AccountStatus.MinimumWidth = 8;
-            this.AccountStatus.Name = "AccountStatus";
-            this.AccountStatus.Width = 150;
-            // 
-            // Edit
-            // 
-            this.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Edit.HeaderText = "Edit";
-            this.Edit.MinimumWidth = 8;
-            this.Edit.Name = "Edit";
-            this.Edit.Text = "Edit";
-            this.Edit.Width = 150;
-            // 
-            // Delete
-            // 
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 8;
-            this.Delete.Name = "Delete";
-            this.Delete.Text = "Delete";
-            this.Delete.Width = 150;
-            // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Bisque;
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.textBox2);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.btnApproveSeller);
             this.tabPage2.Controls.Add(this.btnSuspendSeller);
-            this.tabPage2.Controls.Add(this.btnSearchSellers);
-            this.tabPage2.Controls.Add(this.cmbFilterSellers);
-            this.tabPage2.Controls.Add(this.label1);
-            this.tabPage2.Controls.Add(this.txtSearchSellers);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -218,124 +167,85 @@
             this.tabPage2.Size = new System.Drawing.Size(946, 384);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Seller";
-            this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // btnApproveSeller
+            // textBox2
             // 
-            this.btnApproveSeller.Location = new System.Drawing.Point(764, 202);
-            this.btnApproveSeller.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnApproveSeller.Name = "btnApproveSeller";
-            this.btnApproveSeller.Size = new System.Drawing.Size(76, 24);
-            this.btnApproveSeller.TabIndex = 6;
-            this.btnApproveSeller.Text = "Approve";
-            this.btnApproveSeller.UseVisualStyleBackColor = true;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.textBox2.ForeColor = System.Drawing.Color.Crimson;
+            this.textBox2.Location = new System.Drawing.Point(311, 23);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(101, 28);
+            this.textBox2.TabIndex = 9;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // btnSuspendSeller
+            // button2
             // 
-            this.btnSuspendSeller.Location = new System.Drawing.Point(764, 149);
-            this.btnSuspendSeller.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSuspendSeller.Name = "btnSuspendSeller";
-            this.btnSuspendSeller.Size = new System.Drawing.Size(76, 25);
-            this.btnSuspendSeller.TabIndex = 5;
-            this.btnSuspendSeller.Text = "Suspend";
-            this.btnSuspendSeller.UseVisualStyleBackColor = true;
-            this.btnSuspendSeller.Click += new System.EventHandler(this.btnSuspendSeller_Click);
-            // 
-            // btnSearchSellers
-            // 
-            this.btnSearchSellers.Location = new System.Drawing.Point(521, 23);
-            this.btnSearchSellers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearchSellers.Name = "btnSearchSellers";
-            this.btnSearchSellers.Size = new System.Drawing.Size(67, 21);
-            this.btnSearchSellers.TabIndex = 4;
-            this.btnSearchSellers.Text = "Search";
-            this.btnSearchSellers.UseVisualStyleBackColor = true;
-            // 
-            // cmbFilterSellers
-            // 
-            this.cmbFilterSellers.FormattingEnabled = true;
-            this.cmbFilterSellers.Location = new System.Drawing.Point(390, 22);
-            this.cmbFilterSellers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbFilterSellers.Name = "cmbFilterSellers";
-            this.cmbFilterSellers.Size = new System.Drawing.Size(108, 24);
-            this.cmbFilterSellers.TabIndex = 3;
-            this.cmbFilterSellers.Text = "Choose";
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Crimson;
+            this.button2.Location = new System.Drawing.Point(454, 23);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 28);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Search";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(243, 24);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Crimson;
+            this.label1.Location = new System.Drawing.Point(78, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Search Seller";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(212, 19);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Search Seller by Seller ID";
             // 
-            // txtSearchSellers
+            // btnApproveSeller
             // 
-            this.txtSearchSellers.Location = new System.Drawing.Point(231, 22);
-            this.txtSearchSellers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearchSellers.Name = "txtSearchSellers";
-            this.txtSearchSellers.Size = new System.Drawing.Size(142, 22);
-            this.txtSearchSellers.TabIndex = 1;
+            this.btnApproveSeller.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApproveSeller.ForeColor = System.Drawing.Color.Crimson;
+            this.btnApproveSeller.Location = new System.Drawing.Point(780, 189);
+            this.btnApproveSeller.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnApproveSeller.Name = "btnApproveSeller";
+            this.btnApproveSeller.Size = new System.Drawing.Size(103, 40);
+            this.btnApproveSeller.TabIndex = 6;
+            this.btnApproveSeller.Text = "Delete";
+            this.btnApproveSeller.UseVisualStyleBackColor = true;
+            this.btnApproveSeller.Click += new System.EventHandler(this.btnApproveSeller_Click);
+            // 
+            // btnSuspendSeller
+            // 
+            this.btnSuspendSeller.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuspendSeller.ForeColor = System.Drawing.Color.Crimson;
+            this.btnSuspendSeller.Location = new System.Drawing.Point(780, 81);
+            this.btnSuspendSeller.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSuspendSeller.Name = "btnSuspendSeller";
+            this.btnSuspendSeller.Size = new System.Drawing.Size(103, 41);
+            this.btnSuspendSeller.TabIndex = 5;
+            this.btnSuspendSeller.Text = "Add ";
+            this.btnSuspendSeller.UseVisualStyleBackColor = true;
+            this.btnSuspendSeller.Click += new System.EventHandler(this.btnSuspendSeller_Click);
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Bisque;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BusinessName,
-            this.Email_Seller,
-            this.Status,
-            this.Edit_Seller,
-            this.Delete_Seller});
-            this.dataGridView2.Location = new System.Drawing.Point(14, 63);
+            this.dataGridView2.Location = new System.Drawing.Point(17, 81);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.Size = new System.Drawing.Size(724, 244);
             this.dataGridView2.TabIndex = 0;
-            // 
-            // BusinessName
-            // 
-            this.BusinessName.HeaderText = "Business Name";
-            this.BusinessName.MinimumWidth = 8;
-            this.BusinessName.Name = "BusinessName";
-            this.BusinessName.Width = 150;
-            // 
-            // Email_Seller
-            // 
-            this.Email_Seller.HeaderText = "Email";
-            this.Email_Seller.MinimumWidth = 8;
-            this.Email_Seller.Name = "Email_Seller";
-            this.Email_Seller.Width = 150;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.MinimumWidth = 8;
-            this.Status.Name = "Status";
-            this.Status.Width = 150;
-            // 
-            // Edit_Seller
-            // 
-            this.Edit_Seller.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Edit_Seller.HeaderText = "Edit";
-            this.Edit_Seller.MinimumWidth = 8;
-            this.Edit_Seller.Name = "Edit_Seller";
-            this.Edit_Seller.Width = 150;
-            // 
-            // Delete_Seller
-            // 
-            this.Delete_Seller.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Delete_Seller.HeaderText = "Delete";
-            this.Delete_Seller.MinimumWidth = 8;
-            this.Delete_Seller.Name = "Delete_Seller";
-            this.Delete_Seller.Width = 150;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Bisque;
             this.button1.Font = new System.Drawing.Font("Impact", 12F);
             this.button1.ForeColor = System.Drawing.Color.Crimson;
             this.button1.Location = new System.Drawing.Point(1000, 505);
@@ -343,8 +253,73 @@
             this.button1.Size = new System.Drawing.Size(116, 50);
             this.button1.TabIndex = 1;
             this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Crimson;
+            this.button3.Location = new System.Drawing.Point(780, 285);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 40);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Update";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.Color.Crimson;
+            this.button4.Location = new System.Drawing.Point(126, 336);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(103, 39);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.Color.Crimson;
+            this.button5.Location = new System.Drawing.Point(235, 336);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(103, 39);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Update";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Crimson;
+            this.label2.Location = new System.Drawing.Point(574, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(343, 19);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Not entering anything will show all Sellers";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Crimson;
+            this.label3.Location = new System.Drawing.Point(563, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(377, 19);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Not entering anything will show all Customers";
             // 
             // UserAndSellerManagementForm
             // 
@@ -356,7 +331,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            //this.Name = "UserAndSellerManagementForm";
+            this.Name = "UserAndSellerManagementForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
@@ -377,29 +353,22 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label Search;
-        private System.Windows.Forms.TextBox txtSearchUsers;
         private System.Windows.Forms.Button btnSearchUsers;
-        private System.Windows.Forms.ComboBox cmbFilterUsers;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBusinessName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email_Seller;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit_Seller;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete_Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewComboBoxColumn AccountStatus;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.TextBox txtSearchSellers;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbFilterSellers;
-        private System.Windows.Forms.Button btnSearchSellers;
         private System.Windows.Forms.Button btnSuspendUser;
         private System.Windows.Forms.Button btnApproveSeller;
         private System.Windows.Forms.Button btnSuspendSeller;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BusinessName;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -14,8 +14,11 @@ namespace m2
 {
     public partial class CustomerOptionChoice : Form
     {
-        public CustomerOptionChoice()
+        private Customer currentCustomer;
+
+        public CustomerOptionChoice(Customer customer)
         {
+            this.currentCustomer = customer;
             InitializeComponent();
         }
 
@@ -46,10 +49,20 @@ namespace m2
             string connectionString = "Data Source=AbsirAhmedKhan;Initial Catalog=m3;Integrated Security=True";
 
             string query = @"
-            SELECT p.Image_url, p.ProductName, p.Brand, p.UnitPrice, p.ShippingOptions, p.Rating
+            SELECT p.ProductID, p.Image_url, p.ProductName, p.Brand, p.UnitPrice, p.ShippingOptions, p.Rating
             FROM Product p
             INNER JOIN Category c ON p.CategoryID = c.CategoryID
             WHERE 1=1"; // Ensures no filters still return all products
+
+            if (!string.IsNullOrEmpty(textBox1.Text)) // Check if ProductName is provided
+            {
+                query += " AND ProductName = @ProductName";
+            }
+
+            if (!string.IsNullOrEmpty(textBox2.Text))
+            {
+                query += " AND p.ProductID = @ProductID";
+            }
 
 
             // Apply filters based on user inputs
@@ -91,6 +104,18 @@ namespace m2
                 query = query.TrimEnd(',') + ")";
             }
 
+            if (comboBox3.SelectedItem != null)
+            {
+                if (comboBox3.SelectedItem.ToString() == "Price (Low->High)")
+                {
+                    query += " ORDER BY UnitPrice ASC";
+                }
+                else if (comboBox3.SelectedItem.ToString() == "Price (High->Low)")
+                {
+                    query += " ORDER BY UnitPrice DESC";
+                }
+            }
+
             // Execute the query and display results
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -100,6 +125,13 @@ namespace m2
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         // Add parameters to avoid SQL injection
+                        if (!string.IsNullOrEmpty(textBox1.Text))
+                            cmd.Parameters.AddWithValue("@ProductName", textBox1.Text);
+
+                        if (!string.IsNullOrEmpty(textBox2.Text))
+                            cmd.Parameters.AddWithValue("@ProductID", int.Parse(textBox2.Text));
+
+
                         if (comboBox1.SelectedItem != null)
                             cmd.Parameters.AddWithValue("@Category", comboBox1.SelectedItem.ToString());
 
@@ -113,12 +145,14 @@ namespace m2
                             else if (radioButton2.Checked) rating = 2;
                             else if (radioButton3.Checked) rating = 3;
                             else if (radioButton4.Checked) rating = 4;
+                            else if (radioButton4.Checked) rating = 5;
 
                             cmd.Parameters.AddWithValue("@Rating", rating);
                         }
 
                         if (comboBox2.SelectedItem != null)
                             cmd.Parameters.AddWithValue("@Brand", comboBox2.SelectedItem.ToString());
+
 
                         // Read the results
                         using (SqlDataReader reader = cmd.ExecuteReader())
@@ -132,7 +166,7 @@ namespace m2
                                 MessageBox.Show($"Rows in DataTable: {productsTable.Rows.Count}");
 
                                 // Pass results to the next form
-                                ProductsShown ps = new ProductsShown(productsTable);
+                                ProductsShown ps = new ProductsShown(productsTable, currentCustomer);
                                 this.Hide();
                                 ps.Show();
                             }
@@ -153,21 +187,21 @@ namespace m2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SubmitReviews sr = new SubmitReviews();
+            SubmitReviews sr = new SubmitReviews(currentCustomer);
             this.Hide();
             sr.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ViewProfile vp = new ViewProfile();
+            ViewProfile vp = new ViewProfile(currentCustomer);
             this.Hide();
             vp.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ViewPastOrders vpo = new ViewPastOrders();
+            ViewPastOrders vpo = new ViewPastOrders(currentCustomer);
             this.Hide();
             vpo.Show();
         }
@@ -221,5 +255,87 @@ namespace m2
         {
             //paid shipping
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CustomerTrackShipping ct = new CustomerTrackShipping(currentCustomer);
+            this.Hide();
+            ct.Show();
+        }
+
+        //    private void button5_Click(object sender, EventArgs e)
+        //    {
+        //        // Connection string
+        //        string connectionString = "Data Source=AbsirAhmedKhan;Initial Catalog=m3;Integrated Security=True";
+
+        //        // Example query to retrieve shipping details
+        //        string query = @"
+        //SELECT o.OrderID, s.ShipmentID, t.Status, t.Timestamp
+        //FROM [Order] o
+        //JOIN Shipment s ON o.OrderID = s.OrderID
+        //JOIN Tracking t ON s.ShipmentID = t.ShipmentID
+        //WHERE o.CustomerID = @CustomerID
+        //ORDER BY t.Timestamp DESC";
+
+        //        using (SqlConnection conn = new SqlConnection(connectionString))
+        //        {
+        //            try
+        //            {
+        //                conn.Open();
+        //                using (SqlCommand cmd = new SqlCommand(query, conn))
+        //                {
+        //                    // Use the current customer's ID to filter
+        //                    cmd.Parameters.AddWithValue("@CustomerID", currentCustomer.CustomerID);
+
+        //                    // Execute the query
+        //                    using (SqlDataReader reader = cmd.ExecuteReader())
+        //                    {
+        //                        if (reader.HasRows)
+        //                        {
+        //                            // Build a string to display shipping details
+        //                            StringBuilder shippingDetails = new StringBuilder("Shipping Details:\n\n");
+
+        //                            while (reader.Read())
+        //                            {
+        //                                shippingDetails.AppendLine($"Order ID: {reader["OrderID"]}");
+        //                                shippingDetails.AppendLine($"Shipment ID: {reader["ShipmentID"]}");
+        //                                shippingDetails.AppendLine($"Status: {reader["Status"]}");
+        //                                shippingDetails.AppendLine($"Last Updated: {reader["Timestamp"]}");
+        //                                shippingDetails.AppendLine("---------------------------");
+        //                            }
+
+        //                            // Show shipping details in a MessageBox
+        //                            MessageBox.Show(shippingDetails.ToString(), "Tracking Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                        }
+        //                        else
+        //                        {
+        //                            MessageBox.Show("No shipping details found for your orders.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                        }
+        //                    }
+        //                }
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                MessageBox.Show($"An error occurred while tracking shipping: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            }
+        //        }
+        //    }
+
     }
 }

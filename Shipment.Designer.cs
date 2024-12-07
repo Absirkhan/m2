@@ -41,22 +41,25 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(607, 248);
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Bisque;
+            this.dateTimePicker1.Location = new System.Drawing.Point(506, 248);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(189, 24);
+            this.dateTimePicker1.Size = new System.Drawing.Size(290, 24);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(875, 245);
+            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Bisque;
+            this.dateTimePicker2.Location = new System.Drawing.Point(818, 248);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(184, 24);
+            this.dateTimePicker2.Size = new System.Drawing.Size(291, 24);
             this.dateTimePicker2.TabIndex = 1;
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Bisque;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(85, 197);
             this.dataGridView1.Name = "dataGridView1";
@@ -67,46 +70,50 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Bisque;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(85, 460);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(183, 43);
             this.button1.TabIndex = 3;
             this.button1.Text = "Mark Delayed";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Bisque;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(651, 522);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 38);
             this.button2.TabIndex = 4;
             this.button2.Text = "Confirm Pickup";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Bisque;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Location = new System.Drawing.Point(915, 522);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 38);
             this.button3.TabIndex = 5;
             this.button3.Text = "Confirm Delivery";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Bisque;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(885, 45);
+            this.button4.Location = new System.Drawing.Point(886, 45);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(173, 43);
             this.button4.TabIndex = 6;
             this.button4.Text = "Go Back";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Shipment

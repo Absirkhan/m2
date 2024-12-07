@@ -52,27 +52,42 @@ namespace m2
                 {
                     conn.Open();
 
-                    // SQL query to verify login
-                    string query = "SELECT COUNT(*) FROM Seller WHERE SellerUsername = @username AND SellerPassword = @password";
+                    string query = @"
+                SELECT SellerID, SellerUsername, SellerName, SellerPassword, SellerEmail, SellerPaymentOption
+                FROM Seller
+                WHERE SellerUsername = @username AND SellerPassword = @pass";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         // Add parameters to prevent SQL injection
                         cmd.Parameters.AddWithValue("@username", textBox1.Text);
-                        cmd.Parameters.AddWithValue("@password", textBox2.Text);
+                        cmd.Parameters.AddWithValue("@pass", textBox2.Text);
 
-                        int result = (int)cmd.ExecuteScalar();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Create a Customer object and populate it
+                                Seller seller = new Seller
+                                {
+                                    SellerID = reader.GetInt32(0),
+                                    Username = reader.GetString(1),
+                                    FullName = reader.GetString(2),
+                                    Password = reader.GetString(3),
+                                    Email = reader.GetString(4),
+                                    PaymentOp = reader.GetString(5)
+                                };
 
-                        if (result > 0)
-                        {
-                            MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            SellerOptions so = new SellerOptions();
-                            this.Hide();
-                            so.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                SellerOptions so = new SellerOptions(seller);
+                                this.Hide();
+                                so.Show();
+                            }
+
+                            else
+                            {
+                                MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }

@@ -14,28 +14,30 @@ namespace m2
 {
     public partial class SellerOptions : Form
     {
-        public SellerOptions()
+        private Seller currentSeller;
+        public SellerOptions(Seller seller)
         {
+            this.currentSeller = seller;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SellerListings stats = new SellerListings();
+            SellerListings stats = new SellerListings(currentSeller);
             stats.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SellerOrders orders = new SellerOrders();
+            SellerOrders orders = new SellerOrders(currentSeller);
             orders.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SellerStats stats = new SellerStats();
+            SellerStats stats = new SellerStats(currentSeller);
             stats.Show();
             this.Hide();
 

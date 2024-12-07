@@ -53,8 +53,11 @@ namespace m2
                 {
                     conn.Open();
 
-                    // SQL query to verify login
-                    string query = "SELECT COUNT(*) FROM Customer WHERE CustomerUsername = @username AND CustomerPassword = @pass";
+                    // SQL query to fetch the full customer profile
+                    string query = @"
+                SELECT CustomerID, CustomerUsername, CustomerName, CustomerPassword, CustomerEmail, CustomerPaymentOption
+                FROM Customer
+                WHERE CustomerUsername = @username AND CustomerPassword = @pass";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -62,18 +65,32 @@ namespace m2
                         cmd.Parameters.AddWithValue("@username", textBox2.Text);
                         cmd.Parameters.AddWithValue("@pass", textBox1.Text);
 
-                        int result = (int)cmd.ExecuteScalar();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Create a Customer object and populate it
+                                Customer customer = new Customer
+                                {
+                                    CustomerID = reader.GetInt32(0),
+                                    Username = reader.GetString(1),
+                                    FullName = reader.GetString(2),
+                                    Password = reader.GetString(3),
+                                    Email = reader.GetString(4),
+                                    PaymentOp = reader.GetString(5)
+                                };
 
-                        if (result > 0)
-                        {
-                            MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            CustomerOptionChoice coc = new CustomerOptionChoice();
-                            this.Hide();
-                            coc.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // Pass the Customer object to the next form
+                                CustomerOptionChoice coc = new CustomerOptionChoice(customer);
+                                this.Hide();
+                                coc.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
@@ -83,6 +100,7 @@ namespace m2
                 }
             }
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

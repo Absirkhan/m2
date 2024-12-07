@@ -117,23 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABH4AAAKKCAIAAADEBAt7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAeWVJREFUeF7t3YV7FNfi8PH3r7j3tre/22t1u/UiIYQQSAKR3Y27G4EEghNcSnGK
+        wAAADsABataJCQAAeWVJREFUeF7t3YV7FNfi8PH3r7j3tre/22t1u/UiIYQQSAKR3Y27G4EEghNcSnGK
         a3B3d60gbalTgRZa6khxiuU9y6ST2bMuJ0S+eT7Pfejs2dnZZXOf+TIzZ/5fdadEAAAAoG7cHlbxx7zJ
         N1bMa2T+mDPxzuBy6c0CRqQXAAAA6sjNqW9IxdLI3Bo7QHrLgI70AgAAQF24PbKPFCqN0p3+pdIbBzSk
         FwAAAJS72ynxj8UzpUpplG7OGCO9d0BDegEAAEC5u+XpUqI0WsvmSO8d0JBeAAAAUO5ut0w5UVS6uHDG
