@@ -1,0 +1,109 @@
+<Tablix Name="Tablix1">
+	<TablixBody>
+		<TablixColumns>
+			<TablixColumn>
+				<Width>2.5cm</Width>
+			</TablixColumn>
+			<TablixColumn>
+				<Width>4cm</Width>
+			</TablixColumn>
+			<TablixColumn>
+				<Width>3cm</Width>
+			</TablixColumn>
+			<TablixColumn>
+				<Width>3cm</Width>
+			</TablixColumn>
+			<TablixColumn>
+				<Width>3cm</Width>
+			</TablixColumn>
+		</TablixColumns>
+		<TablixRows>
+			<TablixRow>
+				<Height>0.6cm</Height>
+				<TablixCells>
+					<TablixCell>
+						<CellContents>
+							<Textbox Name="Header_ProductID">
+								<Paragraphs>
+									<Paragraph>
+										<TextRuns>
+											<TextRun>
+												<Value>Product ID</Value>
+											</TextRun>
+										</TextRuns>
+										<Style />
+									</Paragraph>
+								</Paragraphs>
+							</Textbox>
+						</CellContents>
+					</TablixCell>
+					<TablixCell>
+						<CellContents>
+							<Textbox Name="Header_ProductName">
+								<Paragraphs>
+									<Paragraph>
+										<TextRuns>
+											<TextRun>
+												<Value>Product Name</Value>
+											</TextRun>
+										</TextRuns>
+										<Style />
+									</Paragraph>
+								</Paragraphs>
+							</Textbox>
+						</CellContents>
+					</TablixCell>
+					<TablixCell>
+						<CellContents>
+							<Textbox Name="Header_CurrentStock">
+								<Paragraphs>
+									<Paragraph>
+										<TextRuns>
+											<TextRun>
+												<Value>Current Stock</Value>
+											</TextRun>
+										</TextRuns>
+										<Style />
+									</Paragraph>
+								</Paragraphs>
+							</Textbox>
+						</CellContents>
+					</TablixCell>
+					<TablixCell>
+						<CellContents>
+							<Textbox Name="Header_TotalUnitsSold">
+								<Paragraphs>
+									<Paragraph>
+										<TextRuns>
+											<TextRun>
+												<Value>Total Units Sold</Value>
+											</TextRun>
+										</TextRuns>
+										<Style />
+									</Paragraph>
+								</Paragraphs>
+							</Textbox>
+						</CellContents>
+					</TablixCell>
+					<TablixCell>
+						<CellContents>
+							<Textbox Name="Header_StockTurnoverRate">
+								<Paragraphs>
+									<Paragraph>
+										<TextRuns>
+											<TextRun>
+												<Value>Stock Turnover Rate</Value>
+											</TextRun>
+										</TextRuns>
+										<Style />
+									</Paragraph>
+								</Paragraphs>
+							</Textbox>
+						</CellContents>
+					</TablixCell>
+				</TablixCells>
+			</TablixRow>
+		</TablixRows>
+	</TablixBody>
+	<DataSetName>TurnoverDataSet</DataSetName>
+</Tablix>

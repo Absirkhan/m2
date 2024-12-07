@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -103,6 +121,91 @@
     <Compile Include="LogisticsMenu.Designer.cs">
       <DependentUpon>LogisticsMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="m3DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSet5Report4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSet5Report4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetR3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetR3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetReport10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetReport10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetReport3Final.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetReport3Final.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetReport42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetReport42.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetReport5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetReport5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetReport6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetReport6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetReport7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetReport7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetReport8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetReport8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetReport81.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetReport81.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="m3DataSetReport9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>m3DataSetReport9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Notifications.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +232,100 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report101.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report101.Designer.cs">
+      <DependentUpon>Report101.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report102.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report102.Designer.cs">
+      <DependentUpon>Report102.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report3.Designer.cs">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report2.Designer.cs">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report31.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report31.Designer.cs">
+      <DependentUpon>Report31.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report3m3DataSetReal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report3m3DataSetReal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report3Source.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report3Source.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report41.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report41.Designer.cs">
+      <DependentUpon>Report41.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report42.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report42.Designer.cs">
+      <DependentUpon>Report42.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report51.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report51.Designer.cs">
+      <DependentUpon>Report51.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report6.Designer.cs">
+      <DependentUpon>Report6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report7.Designer.cs">
+      <DependentUpon>Report7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report81.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report81.Designer.cs">
+      <DependentUpon>Report81.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report82.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report82.Designer.cs">
+      <DependentUpon>Report82.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report9.Designer.cs">
+      <DependentUpon>Report9.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportsAndAnalyticsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +374,7 @@
     <Compile Include="Shipment.Designer.cs">
       <DependentUpon>Shipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="SubmitReviews.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +465,61 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report10.rdlc" />
+    <EmbeddedResource Include="Report101.resx">
+      <DependentUpon>Report101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report102.rdlc" />
+    <EmbeddedResource Include="Report102.resx">
+      <DependentUpon>Report102.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report3.resx">
+      <DependentUpon>Report3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report1.rdlc" />
+    <EmbeddedResource Include="Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report2.resx">
+      <DependentUpon>Report2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report31.resx">
+      <DependentUpon>Report31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report41.resx">
+      <DependentUpon>Report41.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report42.rdlc" />
+    <EmbeddedResource Include="Report42.resx">
+      <DependentUpon>Report42.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report51.rdlc" />
+    <EmbeddedResource Include="Report51.resx">
+      <DependentUpon>Report51.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report6.resx">
+      <DependentUpon>Report6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report61.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report7.resx">
+      <DependentUpon>Report7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Report81.resx">
+      <DependentUpon>Report81.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report82.rdlc" />
+    <EmbeddedResource Include="Report82.resx">
+      <DependentUpon>Report82.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report9.resx">
+      <DependentUpon>Report9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report91.rdlc" />
     <EmbeddedResource Include="ReportsAndAnalyticsForm.resx">
       <DependentUpon>ReportsAndAnalyticsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +550,7 @@
     <EmbeddedResource Include="TrackShip.resx">
       <DependentUpon>TrackShip.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TurnoverReturned.rdlc" />
     <EmbeddedResource Include="UserAndSellerManagementForm.resx">
       <DependentUpon>UserAndSellerManagementForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +566,194 @@
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="m3DataSet.xsc">
+      <DependentUpon>m3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSet.xss">
+      <DependentUpon>m3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet1.xsc">
+      <DependentUpon>m3DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSet1.xss">
+      <DependentUpon>m3DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet2.xsc">
+      <DependentUpon>m3DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSet2.xss">
+      <DependentUpon>m3DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet3.xsc">
+      <DependentUpon>m3DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSet3.xss">
+      <DependentUpon>m3DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet4.xsc">
+      <DependentUpon>m3DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSet4.xss">
+      <DependentUpon>m3DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet5.xsc">
+      <DependentUpon>m3DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSet5.xss">
+      <DependentUpon>m3DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet5Report4.xsc">
+      <DependentUpon>m3DataSet5Report4.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSet5Report4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSet5Report4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSet5Report4.xss">
+      <DependentUpon>m3DataSet5Report4.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetR3.xsc">
+      <DependentUpon>m3DataSetR3.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetR3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetR3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetR3.xss">
+      <DependentUpon>m3DataSetR3.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport10.xsc">
+      <DependentUpon>m3DataSetReport10.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetReport10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetReport10.xss">
+      <DependentUpon>m3DataSetReport10.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport3Final.xsc">
+      <DependentUpon>m3DataSetReport3Final.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport3Final.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetReport3Final.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetReport3Final.xss">
+      <DependentUpon>m3DataSetReport3Final.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport42.xsc">
+      <DependentUpon>m3DataSetReport42.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport42.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetReport42.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetReport42.xss">
+      <DependentUpon>m3DataSetReport42.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport5.xsc">
+      <DependentUpon>m3DataSetReport5.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetReport5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetReport5.xss">
+      <DependentUpon>m3DataSetReport5.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport6.xsc">
+      <DependentUpon>m3DataSetReport6.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetReport6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetReport6.xss">
+      <DependentUpon>m3DataSetReport6.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport7.xsc">
+      <DependentUpon>m3DataSetReport7.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetReport7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetReport7.xss">
+      <DependentUpon>m3DataSetReport7.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport8.xsc">
+      <DependentUpon>m3DataSetReport8.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetReport8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetReport8.xss">
+      <DependentUpon>m3DataSetReport8.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport81.xsc">
+      <DependentUpon>m3DataSetReport81.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport81.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetReport81.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetReport81.xss">
+      <DependentUpon>m3DataSetReport81.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport9.xsc">
+      <DependentUpon>m3DataSetReport9.xsd</DependentUpon>
+    </None>
+    <None Include="m3DataSetReport9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>m3DataSetReport9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="m3DataSetReport9.xss">
+      <DependentUpon>m3DataSetReport9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -321,9 +763,46 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Report3m3DataSetReal.xsc">
+      <DependentUpon>Report3m3DataSetReal.xsd</DependentUpon>
+    </None>
+    <None Include="Report3m3DataSetReal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Report3m3DataSetReal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report3m3DataSetReal.xss">
+      <DependentUpon>Report3m3DataSetReal.xsd</DependentUpon>
+    </None>
+    <None Include="Report3Source.xsc">
+      <DependentUpon>Report3Source.xsd</DependentUpon>
+    </None>
+    <None Include="Report3Source.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Report3Source.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Report3Source.xss">
+      <DependentUpon>Report3Source.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
